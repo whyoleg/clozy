@@ -1,0 +1,15 @@
+public abstract interface class dev/whyoleg/clozy/SafeCloseAction {
+	public fun onAutoClose ()V
+	public abstract fun onClose ()V
+	public fun onDirectClose ()V
+}
+
+public class dev/whyoleg/clozy/SafeCloseable : java/lang/AutoCloseable {
+	public fun <init> (Ldev/whyoleg/clozy/SafeCloseAction;)V
+	public final fun close ()V
+}
+
+public final class dev/whyoleg/clozy/SafeCloseableKt {
+	public static final fun SafeCloseable (Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)Ldev/whyoleg/clozy/SafeCloseable;
+}
+

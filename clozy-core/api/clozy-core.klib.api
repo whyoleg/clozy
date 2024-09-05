@@ -1,0 +1,21 @@
+// Klib ABI Dump
+// Targets: [androidNativeArm32, androidNativeArm64, androidNativeX64, androidNativeX86, iosArm64, iosSimulatorArm64, iosX64, js, linuxArm64, linuxX64, macosArm64, macosX64, mingwX64, tvosArm64, tvosSimulatorArm64, tvosX64, wasmJs, wasmWasi, watchosArm32, watchosArm64, watchosDeviceArm64, watchosSimulatorArm64, watchosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.whyoleg.clozy:clozy-core>
+abstract interface dev.whyoleg.clozy/SafeCloseAction { // dev.whyoleg.clozy/SafeCloseAction|null[0]
+    abstract fun onClose() // dev.whyoleg.clozy/SafeCloseAction.onClose|onClose(){}[0]
+    open fun onAutoClose() // dev.whyoleg.clozy/SafeCloseAction.onAutoClose|onAutoClose(){}[0]
+    open fun onDirectClose() // dev.whyoleg.clozy/SafeCloseAction.onDirectClose|onDirectClose(){}[0]
+}
+
+open class dev.whyoleg.clozy/SafeCloseable : kotlin/AutoCloseable { // dev.whyoleg.clozy/SafeCloseable|null[0]
+    constructor <init>(dev.whyoleg.clozy/SafeCloseAction) // dev.whyoleg.clozy/SafeCloseable.<init>|<init>(dev.whyoleg.clozy.SafeCloseAction){}[0]
+
+    final fun close() // dev.whyoleg.clozy/SafeCloseable.close|close(){}[0]
+}
+
+final inline fun <#A: kotlin/Any?> dev.whyoleg.clozy/SafeCloseable(#A, crossinline kotlin/Function1<#A, kotlin/Unit>): dev.whyoleg.clozy/SafeCloseable // dev.whyoleg.clozy/SafeCloseable|SafeCloseable(0:0;kotlin.Function1<0:0,kotlin.Unit>){0§<kotlin.Any?>}[0]
