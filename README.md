@@ -1,12 +1,15 @@
 # clozy
 
-## Overview
+Kotlin Multiplatform resource management.
 
-## Features
+> Not published, experimenting...
 
-## Using in your projects
+## Features planned
 
-## Implementation details
+- [x] JDK-Cleaner-like API: release resources on GC
+- [ ] Leak tracking/detection
+- [ ] Pooling of resources
+- [ ] Your idea here: create an issue!
 
 ## Bugs and Feedback
 
